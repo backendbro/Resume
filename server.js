@@ -26,7 +26,7 @@ app.use(express.static('public'))
 const contact = require('./routes/contact')
 
 //mount routes
-app.use('/contact', contact)
+app.use('/', contact)
 
 
 const port = process.env.PORT || 5000;
