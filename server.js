@@ -29,7 +29,7 @@ const contact = require('./routes/contact')
 app.use('/', contact)
 
 
-const port = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5000;
 
 const server = app.listen(PORT, () => {
     console.log(`Server started on Port: ${PORT}`)
