@@ -4,26 +4,26 @@ const Contact = require('../models/Contact')
 
 
 //@@desc     Renders the index page
-router.get('/contact',  (req, res) => {
+router.get('/',  (req, res) => {
     res.render('contact')
 })
 
 
 //renders the dashboard
-router.get('/contact/dashboard', (req, res) => {
+router.get('/dashboard', (req, res) => {
     res.render('dashboard')
 })
 
 //handles the form
-router.post('/contact/recieved', async (req, res) => {
+router.post('/recieved', async (req, res) => {
     const contact = await Contact.create(req.body)
     await contact.save()
-    res.redirect('/contact')
+    res.redirect('/')
     
 })
 
 //displays all messages
-router.get('/contact/message', async (req, res) => {
+router.get('/message', async (req, res) => {
     const messages = await Contact.find().sort({date: -1}).lean()
    
     res.render('message', {list: messages})
