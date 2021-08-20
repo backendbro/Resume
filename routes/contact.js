@@ -16,6 +16,7 @@ router.get('/dashboard', (req, res) => {
 
 //handles the form
 router.post('/recieved', async (req, res) => {
+
     const contact = await Contact.create(req.body)
     await contact.save()
     res.redirect('/')
