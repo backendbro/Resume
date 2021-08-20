@@ -16,3 +16,4 @@ This is a CV web app, where potential employers can peruse through and reachout 
  * Please endeavour to click on the reachout button, at the bottom left corner to get the contact form
  * Click on the blue notification button at the top right corner, to acccess the messages that we got from 
     our potential clients.
+#Powered by Zuri
